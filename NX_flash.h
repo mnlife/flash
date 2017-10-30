@@ -3,7 +3,8 @@
 *Flash (Data Record Management) driver                             					                                                          *
 *Version: 1.0.0                                                                                                                 *
 *2007/07/16 writed by Bulla Liu
-*(C) Copyright 2007-2009, Emeson NetworkPower China Inc.     
+*(C) Copyright 2007-2009, Emeson NetworkPower China Inc.
+*
 *
 *********************************************************************************/
 #define DATA_FLASH_BASE 		0x30000000		/*KEYBOARD¼Ä´æÆ÷Óò»ùÖ·*/
