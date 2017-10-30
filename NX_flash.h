@@ -2,11 +2,10 @@
 /*********************************************************************************
 *Flash (Data Record Management) driver                             					                                                          *
 *Version: 1.0.0                                                                                                                 *
-*2007/07/16 writed by Bulla Liu                       
+*2007/07/16 writed by Bulla Liu
 *(C) Copyright 2007-2009, Emeson NetworkPower China Inc.     
 *
-*   
-*********************************************************************************/    
+*********************************************************************************/
 #define DATA_FLASH_BASE 		0x30000000		/*KEYBOARD寄存器域基址*/
 
 //typedef unsigned char __u8;
@@ -22,14 +21,14 @@ typedef struct _CFIDENT
   __u16 InterfaceDesc;				/*可支持的数据总线类型*/
   __u16 MaxBufWriteSize;			/*最大支持一次性编程的缓冲区大小。*/
   __u8  NumEraseRegions;			/*不同大小的擦写块数量*/
-  __u16	NumFirstRegion;				/*第一区域块的个数: + 1 */  
+  __u16	NumFirstRegion;				/*第一区域块的个数: + 1 */
   __u16	SizeFirstRegion;			/*第一区域每块的大小: * 256 bytes */
-  __u16	NumSecondRegion;			/*第二区域块的个数: + 1 */  
+  __u16	NumSecondRegion;			/*第二区域块的个数: + 1 */
   __u16	SizeSecondRegion;			/*第二区域每块的大小: * 256 bytes */
-  __u16	NumThirdRegion;				/*第三区域块的个数: + 1 */  
+  __u16	NumThirdRegion;				/*第三区域块的个数: + 1 */
   __u16	SizeThirdRegion;			/*第三区域每块的大小: * 256 bytes */
-  __u16	NumFouthRegion;				/*第四区域块的个数: + 1 */  
-  __u16	SizeFouthRegion;			/*第四区域每块的大小: * 256 bytes */   
+  __u16	NumFouthRegion;				/*第四区域块的个数: + 1 */
+  __u16	SizeFouthRegion;			/*第四区域每块的大小: * 256 bytes */
 }CFIDENT;
 
 
@@ -39,17 +38,17 @@ typedef struct _CFISYS
   __u8 	TyBlkErase;	   				/*典型的块擦除时间：2的n次方*/
   __u8  TyChipErase;				/*典型的片擦除时间：2的n次方*/
   __u8 	MaxProgrom;					/*最大的字节或者字编程时间：2的n次方*/
-  __u8 	MaxBlkErase;				/*最大的块擦除时间：2的n次方*/        
-  __u8  MaxChipErase;				/*最大的片擦除时间：2的n次方*/        
+  __u8 	MaxBlkErase;				/*最大的块擦除时间：2的n次方*/
+  __u8  MaxChipErase;				/*最大的片擦除时间：2的n次方*/
 }CFISYS;
 
-typedef struct __CFIFRI 
+typedef struct __CFIFRI
 {
   __u8  pri[3];						/*主命令集算法的标志，应该为"PRI"三个字符。*/
   __u8  MajorVersion;				/*该算法的大版本。*/
   __u8  MinorVersion;				/*该算法的小版本。*/
   __u8  EraseSuspend;				/*是否支持擦除悬挂。*/
-  __u8  TopBottomType;				/*Boot BLOCK类型。*/  
+  __u8  TopBottomType;				/*Boot BLOCK类型。*/
 }CFIFRI;
 
 
@@ -122,15 +121,3 @@ typedef struct __CFIFRI
 #define	LINE_NUM	__LINE__
 
 #define	PRINT_TRACE(x)		x ? (void)0 : (void)printk
-
-
-
-
-
-
-
-
-
-
-
-
